@@ -38,36 +38,10 @@ The repository contains three primary files, mapping out the evolution from base
 In order to test the implemented design, execute the following terminal commands:
 
 
-### Sequential CPU Pipeline
-Use this pipeline to run the standard C++ reference engine and calculate baseline performance profiles.
 ```bash
-# 1. Clear out previous frame files
-rm -rf output/ && mkdir -p output
+# Grant execution permissions
+chmod +x run_simulation.sh
 
-# 2. Compile and run the CPU engine
-g++ -O3 -std=c++17 naive_d2q9.cpp -o naive_d2q9
-
-# 3. Execute the simulation
-./naive_d2q9
-
-# 3. Animate the simulation
-python3 animate.py
-```
-
-
-### Parallel GPU Pipeline
-Use this pipeline to run the accelerated CUDA engine and evaluate hardware block scaling performance.
-
-```bash
-# 1. Clear out previous frame files
-rm -rf output/ && mkdir -p output
-
-# 2. Compile and run the GPU engine
-nvcc -O3 -arch=sm_80 optimized_d2q9.cu -o optimized_d2q9
-
-# 3. Execute the simulation
-./optimized_d2q9
-
-# 4. Animate the simulation
-python3 animate.py
+# Run the full simulation script
+./run_simulation.sh
 ```
