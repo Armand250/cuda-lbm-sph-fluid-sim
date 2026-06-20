@@ -1,0 +1,24 @@
+{
+     "container": {
+          "width": 1.0,
+          "height": 1.0
+     },
+     "physics": {
+          "max_frames": 4000,
+          "time_step": 0.0005,
+          "gravity": {"x": 0.0, "y": -9.81}
+     },
+     "fluid_properties": {
+          "rest_density": 1000.0,
+          "viscosity": 0.5,
+          "particle_mass": 0.1,
+          "smoothing_radius": 0.02
+     },
+     "fluid_sources": [
+     {
+          "type": "block",
+          "bounds": {"x_min": 0.05, "x_max": 0.35, "y_min": 0.1, "y_max": 0.45}
+     }
+     ],
+     "obstacles": []
+}
