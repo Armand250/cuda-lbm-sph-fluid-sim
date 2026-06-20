@@ -29,6 +29,7 @@ for config_file in scenes/*.json; do
                     --section SpeedOfLight_RooflineChart \
                     --section MemoryWorkloadAnalysis \
                     --section ComputeWorkloadAnalysis \
+                    --section SourceCounters \
                     --section Occupancy \
                     --force-overwrite \
                     -o "$profile_out" \
